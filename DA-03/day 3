@@ -1,0 +1,43 @@
+# DA-03: Retail and Supply Chain Control Tower
+
+A near real-time view of inventory, deliveries and suppliers. The goal is to catch problems like stock-outs and late suppliers before they hurt sales.
+
+Part of my Data Analytics internship at Nexvia Technologies.
+
+## What I'm building
+
+1. Store inventory, shipment and supplier data in PostgreSQL
+2. Refresh the data every hour using an Airflow DAG
+3. Track KPIs: stock-out rate, on-time delivery, supplier lead time, days of inventory
+4. Detect anomalies (sudden delays or demand spikes) using z-score
+5. Forecast demand with Prophet and compare it with current stock
+6. Build a Superset dashboard with a what-if panel (for example, supplier delayed by 7 days)
+7. Send Slack or email alerts when a threshold is crossed
+
+## Tech stack
+
+PostgreSQL, Airflow, Python, Prophet, Apache Superset, Docker
+
+## Dataset
+
+Simulated hourly inventory and supplier data, generated with Python.
+
+## Status
+
+Work in progress.
+
+- [ ] Database and data generator
+- [ ] Airflow DAG
+- [ ] KPIs
+- [ ] Anomaly detection
+- [ ] Forecasting
+- [ ] Dashboard
+- [ ] Alerts
+
+## How to run
+
+Will add setup steps once everything is working.
+
+## Author
+
+Jessica Katru
