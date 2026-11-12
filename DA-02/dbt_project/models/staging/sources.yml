@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: capstone
+    schema: capstone
+    tables:
+      - name: orders
+      - name: customer
+      - name: payments
+      - name: session
+      - name: ad_spend
