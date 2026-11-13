@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: supply_pg
+    environment:
+      POSTGRES_USER: supply
+      POSTGRES_PASSWORD: supply
+      POSTGRES_DB: supplychain
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
