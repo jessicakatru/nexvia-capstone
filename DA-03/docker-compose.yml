@@ -11,5 +11,21 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  airflow:
+    image: apache/airflow:2.10.5
+    container_name: supply_airflow
+    depends_on:
+      - postgres
+    environment:
+      PGHOST: postgres
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      _PIP_ADDITIONAL_REQUIREMENTS: "numpy psycopg2-binary"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./:/opt/airflow/project
+    command: standalone
+
 volumes:
   pgdata:
